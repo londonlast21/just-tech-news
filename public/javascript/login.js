@@ -1,3 +1,5 @@
+console.log("javascript loaded");
+
 async function signupFormHandler(event) {
     event.preventDefault();
   
@@ -26,10 +28,11 @@ async function signupFormHandler(event) {
 
 async function loginFormHandler(event) {
     event.preventDefault();
-  
+
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
+    
     if (email && password) {
       const response = await fetch('/api/users/login', {
         method: 'post',
@@ -41,10 +44,12 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+      document.location.replace('/dashboard/');
+      console.log("success")
       } else {
         alert(response.statusText);
       }
+      console.log(response);
     }
   };
   
