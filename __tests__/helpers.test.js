@@ -8,11 +8,7 @@ test('format_date() returns a date string', () => {
   });
 
 
-//   test('format_plural() returns correct pluralization', () => {
-//       const word = format_plural('lion, 2');
 
-//       expect(format_plural(word)).toBe('lions')
-//   });
 
 test('format_url() returns a simplified url string', () => {
     const url1 = format_url('http://test.com/page/1');
